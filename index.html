@@ -10,8 +10,8 @@
          Dropbox for keywords, suggestions
          Subscribe button -->
     <body>
-        <!-- This will be used to collect users' inputs -->
         <div>
+            <!-- This will be used to collect users' inputs -->
             <form action="http://policescanner.space:8000/addphonenumber" method="post">
                 <div id="phoneNumber">
                     <input type="text" id="phone" name="phone" pattern="^\d{11}$"  oninvalid="setCustomValidity('Enter exactly 11 digits including the 1 in front')" placeholder="Enter Your Phone Number Here" required>
@@ -25,6 +25,7 @@
                     <input type="submit" value="Search">
                 </div>
             </form>
+            <!-- This will return users' query -->
             <form action="http://policescanner.space:8000/subscriptions" method="post">
                 <div id="checking">
                     <label>Check your query: </label>
