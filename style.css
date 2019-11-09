@@ -2,11 +2,26 @@ body {
     background-color: powderblue;
 }
 
-#input {
-    width: 200px;
-    box-sizing: border-box;
+div {
+    position: relative;
+    top: 200px;
+    left: 300px;
+}
+
+#phone {
+    width: 170px;
+    display: inline;
+    text-align: left;
+}
+
+#keywords {
+    height: 100px;
+    display: inline;
+    text-align: center;
+    top: 200px;
 }
 
 textarea {
     resize: none;
 }
+

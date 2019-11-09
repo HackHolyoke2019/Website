@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <!-- This links between html and css -->
     <head>
-        <link rel="stylesheet" type="text/css" href="/style.css">
+        <!-- This links between html and css -->
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <!-- Textbox for phone number
          Dropbox for keywords, suggestions
          Subscribe button -->
     <body>
+
         <!-- This will be used to collect users' inputs -->
-        <form action="users.php" method="post">
-            <input type="text" id="input" placeholder="Enter Your Phone Number Here">
-            <textarea row="10" cols="50" name="keywords" required></textarea>
-            <input type="submit" value="Subscribe">
-        </form>
+        <div>
+            <form action="users.php" method="post">
+                <input type="text" id="phone" placeholder="Enter Your Phone Number Here" required>
+                <textarea row="50" cols="50" id="keywords" placeholder="What are you looking for?" required></textarea>
+                <button type="submit" id="subscribe"> Subscribe </button>
+            </form>
+        </div>
+        <!-- This links between html and js -->
+        <script scr="phonescript.js"></script>
     </body>
 </html>
