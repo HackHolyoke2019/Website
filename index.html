@@ -3,18 +3,37 @@
     <head>
         <!-- This links between html and css -->
         <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- This links between html and js -->
+        <script src="phone.js"></script>
     </head>
     <!-- Textbox for phone number
          Dropbox for keywords, suggestions
          Subscribe button -->
     <body>
-
         <!-- This will be used to collect users' inputs -->
         <div>
-            <form action="http://policescanner.space/addphonenumber" method="post">
-                <input type="text" id="phone" placeholder="Enter Your Phone Number Here" required>
-                <textarea row="50" cols="50" id="keywords" placeholder="What are you looking for?" required></textarea>
-                <button type="submit" id="subscribe"> Subscribe </button>
+            <form action="http://policescanner.space:8000/addphonenumber" method="post">
+                <div id="phoneNumber">
+                    <input type="text" id="phone" name="phone" pattern="^\d{11}$"  oninvalid="setCustomValidity('Enter exactly 11 digits including the 1 in front')" placeholder="Enter Your Phone Number Here" required>
+                </div>
+
+                <div id="majorKeywords">
+                    <textarea row="50" cols="50" id="keywords" name="keywords" placeholder=" Type commas ',' if doing multiple searches" required></textarea>
+                </div>
+
+                <div id="button">
+                    <input type="submit" value="Search">
+                </div>
+            </form>
+            <form action="http://policescanner.space:8000/subscriptions" method="post">
+                <div id="checking">
+                    <label>Check your query: </label>
+                    <input type="text" id="check" name="check" pattern="^\d{11}$"  oninvalid="setCustomValidity('Enter exactly 11 digits including the 1 in front')" placeholder="Enter Your Phone Number Here" required>
+                </div>
+
+                <div id="checkButton">
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </div>
     </body>

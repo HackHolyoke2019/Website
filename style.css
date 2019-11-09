@@ -1,11 +1,25 @@
 body {
     background-color: powderblue;
+    height: 100%;
+    width: 100%;
 }
 
-div {
-    position: relative;
+#phoneNumber {
+    position: fixed;
     top: 200px;
-    left: 300px;
+    left: 175px;
+}
+
+#majorKeywords {
+    position: fixed;
+    top: 250px;
+    left: 175px;
+}
+
+#button {
+    position: fixed;
+    top: 350px;
+    left: 175px;
 }
 
 #phone {
@@ -15,13 +29,26 @@ div {
 }
 
 #keywords {
-    height: 100px;
-    display: inline;
+    height: 50px;
     text-align: center;
+}
+
+#checking {
+    position: fixed;
     top: 200px;
+    right: 175px;
+}
+
+#checkButton {
+    position: fixed;
+    top: 250px;
+    right: 175px;
 }
 
 textarea {
     resize: none;
+    padding-top: 30px;
 }
+
+
 
