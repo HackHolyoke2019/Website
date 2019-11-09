@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <!-- This links between html and js -->
         <script src="phone.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     </head>
     <!-- Textbox for phone number
          Dropbox for keywords, suggestions
@@ -26,7 +27,7 @@
                 </div>
             </form>
             <!-- This will return users' query -->
-            <form action="http://policescanner.space:8000/subscriptions" method="post">
+            <form action="http://policescanner.space:8000/subscriptions" method="post" onsubmit="formSubmit()">
                 <div id="checking">
                     <label>Check your query: </label>
                     <input type="text" id="check" name="check" pattern="^\d{11}$"  oninvalid="setCustomValidity('Enter exactly 11 digits including the 1 in front')" placeholder="Enter Your Phone Number Here" required>
@@ -38,4 +39,11 @@
             </form>
         </div>
     </body>
+    <script>
+        document.getElementById('getAPI').addEventListener('click', getAPI);
+        function getAPI(){
+            fetch('http://policescanner.space:8000/subscriptions')
+        .then((res) => { return res.json() })
+        }
+    </script>
 </html>
